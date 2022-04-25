@@ -56,6 +56,7 @@ class productos : AppCompatActivity() {
                 var nombre_libro=parent.getItemAtPosition(position).toString()
                 Toast.makeText(this,parent.getItemAtPosition(position).toString(),Toast.LENGTH_LONG).show()
                 val intent= Intent(this,leer_pdf::class.java)
+                //enviamos informacion extra a leer_pdf la cual es el nombre del libro
                 intent.putExtra("TITULO LIBRO",nombre_libro)
                 startActivity(intent)
             }
